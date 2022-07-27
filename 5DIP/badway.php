@@ -1,11 +1,11 @@
 <?php
 
-class UserDB {
+class UserManager
+{
+    private $connection;
 
-    private $dbConnection;
-
-    public function __construct(MySQLConnection $dbConnection) {
-        $this->dbConnection = $dbConnection;
+    public function __construct(MySQLConnection $connection) {
+        $this->connection = $connection;
     }
 
     public function store(User $user) {
@@ -16,4 +16,8 @@ class UserDB {
 
 class MySQLConnection {
 
+     public function connect()
+     {
+
+     }
 }
